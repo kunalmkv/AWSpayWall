@@ -23,7 +23,7 @@ const sendResetPasswordMail = async (name, email, id) => {
             from: config.emailUser,
             to: email,
             subject: 'Reset Password',
-            html: `<p> Hiii ${name}, Please copy the link and<a href=http://localhost:3000/password/resetpassword/${id}>  reset pssword </a>`
+            html: `<p> Hiii ${name}, Please copy the link and<a href=http://18.117.184.26:3000/password/resetpassword/${id}>  reset pssword </a>`
         }
         transporter.sendMail(mailOptions, function (error, info) {
             if (error) {

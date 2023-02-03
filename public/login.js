@@ -11,7 +11,7 @@ async function newUserSave(event) {
         pw
     }
     try {
-        await axios.post("http://localhost:3000/newUser/add", obj).then(response => {
+        await axios.post("http://18.117.184.26:3000/newUser/add", obj).then(response => {
 
             alert('Registered Successfully. Login!!');
         })
@@ -31,7 +31,7 @@ async function userLogin(event) {
         pw
     }
     try {
-        await axios.post("http://localhost:3000/existingUser/login", loginDetail).then(response => {
+        await axios.post("http://18.117.184.26:3000/existingUser/login", loginDetail).then(response => {
             if (response.status === 200) {
                 alert(response.data.message);
                 localStorage.setItem('token', response.data.token);
